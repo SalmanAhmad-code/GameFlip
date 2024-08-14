@@ -6,7 +6,10 @@ export default function NavBar() {
 
         <div className="press-start-2p-regular h-20 bg-[#151515] w-full flex flex-row justify-evenly items-center">
             <div className="h-full bg-[#151515] w-[80vw] flex flex-row justify-evenly items-center">
-                <ul>
+                <ul className="flex flex-row justify-center items-center gap-3">
+                    <li>
+                        <Image src={'/logo.png'} width={40} height={40} alt="logo" className="rounded-full" />
+                    </li>
                     <li>
                         <a href="/" style={{
                             transitionDuration: "500ms !important"
