@@ -1,5 +1,6 @@
 import { TextField, Typography } from "@mui/material";
 import React from "react";
+import Image from "next/image";
 
 export default function NavBar() {
     return (
