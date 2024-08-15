@@ -39,7 +39,7 @@ export default function WaitList_Forum() {
     };
     return (
         <div className="flex flex-col justify-center items-center relative gap-3">
-            <form onSubmit={handleSubmit} className="flex flex-row justify-center items-center relative gap-3">
+            <form onSubmit={handleSubmit} className="flex flex-col lg:flex-row justify-center items-center relative gap-3">
                 <span className="w-full h-10 bg-gray-200 cursor-pointe text-sm flex p-1 border-gray-300">
                     <input type="email"
                         value={email}
