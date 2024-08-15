@@ -3,13 +3,13 @@ import { getFirestore } from "firebase/firestore";
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB8hjQ95nw9tiEikWevSjqgFsF8Ye1tpP0",
-    authDomain: "gameflip-225b0.firebaseapp.com",
-    projectId: "gameflip-225b0",
-    storageBucket: "gameflip-225b0.appspot.com",
-    messagingSenderId: "646950043486",
-    appId: "1:646950043486:web:7fe0af866418a040e659cf",
-    measurementId: "G-8BYPQBXY54"
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_I,
+    appId: process.env.NEXT_PUBLIC_APP_ID,
+    measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID
 };
 
 // Initialize Firebase
