@@ -1,20 +1,20 @@
 import React from 'react'
 import { Box } from '@mui/material'
+import AnimatedBg from './AnimatedBg'
 
 export default function Plans_And_Pricing() {
     return (
-        <Box id="plans" className="mt-8 h-fit md:h-screen relative bg-cover bg-center w-full flex flex-col items-center justify-center text-center p-8">
-            <div class="press-start-2p-regular max-w-lg md:max-w-2xl mx-auto mb-10 md:mb-14 text-center flex flex-col justify-center items-center">
+        <Box id="plans" className="mt-8 h-fit relative bg-cover bg-center w-full flex flex-col items-center justify-center text-center p-8">
+            <div class="max-w-lg md:max-w-2xl mx-auto mb-10 md:mb-14 text-center flex flex-col justify-center items-center">
                 <h1 class="text-3xl md:text-4xl font-semibold mb-4 md:mb-6 lg:text-5xl flex flex-col md:flex-row text-white">
-                    <span class="text-[#FFEA20]">Flexible&#160;</span> <span>Plans</span>
+                    <span class="text-blue-400 dark:text-[#FFEA20] press-start-2p-regular">Flexible&#160;</span> <span className='press-start-2p-regular'>Plans</span>
                 </h1>
-                <p class="text-base md:text-xl text-gray-300 font-medium">
+                <p class="text-base md:text-xl text-gray-500 dark:text-gray-300 font-medium">
                     Choose a plan that works best for you and your team.
                 </p>
             </div>
             <div class="flex flex-col justify-between items-center lg:flex-row lg:items-start">
-
-                <div class="w-full flex-1 mt-8 p-8 order-2 bg-white shadow-xl sm:w-96 lg:w-full lg:order-1 lg:rounded-r-none">
+                <div class="z-40 w-full flex-1 mt-8 p-8 order-2 bg-white shadow-xl sm:w-96 lg:w-full lg:order-1 lg:rounded-r-none">
                     <div class="mb-7 pb-7 flex items-center border-b border-gray-300">
                         <img src="https://res.cloudinary.com/williamsondesign/abstract-1.jpg" alt="" class="rounded-3xl w-20 h-20" />
                         <div class="ml-5">
@@ -51,7 +51,7 @@ export default function Plans_And_Pricing() {
                     </a>
                 </div>
 
-                <div class="w-full flex-1 p-8 order-1 shadow-xl bg-gray-800 text-gray-300 sm:w-96 lg:w-full lg:order-2 lg:mt-0">
+                <div class="z-40 w-full flex-1 p-8 order-1 shadow-xl bg-gray-800 text-gray-300 sm:w-96 lg:w-full lg:order-2 lg:mt-0">
                     <div class="mb-8 pb-8 flex items-center border-b border-gray-600">
                         <img src="https://res.cloudinary.com/williamsondesign/abstract-2.jpg" alt="" class="rounded-3xl w-20 h-20" />
                         <div class="ml-5">
@@ -88,7 +88,7 @@ export default function Plans_And_Pricing() {
                     </a>
                 </div>
 
-                <div class="w-full flex-1 mt-8 p-8 order-3 bg-white shadow-xl sm:w-96 lg:w-full lg:order-3 lg:rounded-l-none">
+                <div class="z-40 w-full flex-1 mt-8 p-8 order-3 bg-white shadow-xl sm:w-96 lg:w-full lg:order-3 lg:rounded-l-none">
                     <div class="mb-7 pb-7 flex items-center border-b border-gray-300">
                         <img src="https://res.cloudinary.com/williamsondesign/abstract-3.jpg" alt="" class="rounded-3xl w-20 h-20" />
                         <div class="ml-5">
@@ -126,6 +126,7 @@ export default function Plans_And_Pricing() {
                 </div>
 
             </div>
+            <AnimatedBg/>
         </Box>
     )
 }
