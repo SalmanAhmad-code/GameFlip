@@ -4,7 +4,7 @@ import React from 'react'
 export default function NavBar2() {
     return (
         <nav
-            className="press-start-2p-regular flex-no-wrap relative flex w-full items-center justify-between bg-[#F3F8FF] py-2 shadow-dark-mild dark:bg-[#151515] lg:flex-wrap lg:justify-start lg:py-4">
+            className="press-start-2p-regular h-20 flex-no-wrap relative flex w-full items-center justify-between bg-[#F3F8FF] py-2 shadow-dark-mild dark:bg-[#151515] lg:flex-wrap lg:justify-start lg:py-4">
             <div className="flex w-full flex-wrap items-center justify-between px-3">
                 {/* <!-- Hamburger button for mobile view --> */}
                 <button
