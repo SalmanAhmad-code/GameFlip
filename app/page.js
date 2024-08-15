@@ -23,7 +23,7 @@ export default function Home() {
             GameFlip is your ultimate companion for mastering the world of gaming. Whether you&apos;re a casual gamer or a competitive pro, our AI-driven flashcards are designed to help you sharpen your skills, enhance your knowledge, and discover new aspects of your favorite games.
           </p>
           <p className="text-white text-sm md:text-2xl self-end mt-4 md:mt-8 w-full md:w-3/5">
-            With GameFlip, learning becomes a game in itself. Our platform curates and delivers personalized flashcards that cover everything from game mechanics and strategies to hidden lore and trivia. Whether you're preparing for an in-game challenge or just looking to expand your gaming horizons, GameFlip has you covered.
+            With GameFlip, learning becomes a game in itself. Our platform curates and delivers personalized flashcards that cover everything from game mechanics and strategies to hidden lore and trivia. Whether you're preparing for an in game challenge or just looking to expand your gaming horizons, GameFlip has you covered.
           </p>
           <p className="text-white text-sm md:text-xl mt-4 md:mt-8 w-full md:w-3/5">
             Join us on our mission to transform the way gamers learn and connect. Level up your gaming experience with GameFlip!
