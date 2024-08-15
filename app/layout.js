@@ -1,8 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-// import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar";
 import NavBar2 from "./components/NavBar2";
 import ConstructionTag from "./components/ConstructionTag";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,11 +27,11 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-gradient-to-b dark:from-[#151515] dark:via-[#151515] dark:to-gray-700 from-slate-300 via-slate-300 to-slate-50`}>
         <NavBar2 />
-        <ConstructionTag />
         {children}
-      </body>
+        <Footer/>
+      </body> 
     </html>
   );
 }

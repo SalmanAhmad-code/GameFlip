@@ -50,7 +50,7 @@ export default function WaitList_Forum() {
                 </span>
                 <button type='submit' className="h-10 w-96 bg-gray-200 cursor-pointer text-sm flex justify-center items-center border-r-[6px] border-r-gray-300 border-b-[6px] border-b-gray-500 hover:border-r-4 hover:border-b-4 transition-transform"><p className="flex-grow px-4 text-xs focus:outline-none text-center cursor-pointer pointer-events-none">Join waitlist</p></button>
             </form>
-            <p className='text-white shadow-sm shadow-black bg-black bg-opacity-50'>{message}</p>
+            <p className='text-white shadow-sm shadow-black bg-black bg-opacity-50 w-full text-center'>{message}</p>
         </div>
     )
 }
