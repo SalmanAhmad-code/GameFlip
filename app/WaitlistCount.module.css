@@ -1,0 +1,28 @@
+/* WaitlistCount.module.css */
+.count {
+    display: inline-block;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slideUp {
+    transform: translateY(-20px);
+    animation: slideDownReset 0.5s forwards;
+  }
+  
+  @keyframes slideDownReset {
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  .slideDown {
+    transform: translateY(20px);
+    animation: slideUpReset 0.5s forwards;
+  }
+  
+  @keyframes slideUpReset {
+    to {
+      transform: translateY(0);
+    }
+  }
+  
