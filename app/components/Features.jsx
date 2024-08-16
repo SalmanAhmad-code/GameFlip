@@ -3,7 +3,7 @@ import AnimatedBg from './AnimatedBg'
 
 export default function Features() {
     return (
-        <div id='features' className="bg-slate-200 dark:bg-gray-700 relative p-4 h-fit">
+        <div id='features' className="bg-transparent relative p-4 h-fit">
             <AnimatedBg/>
             <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6 flex flex-col justify-center items-center">
                 <div className="md:w-2/3 lg:w-1/2 mt-12 text-gray-100 flex flex-col justify-center items-center">

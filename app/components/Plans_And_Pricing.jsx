@@ -6,7 +6,7 @@ export default function Plans_And_Pricing() {
     return (
         <Box id="plans" className="mt-8 h-fit relative bg-cover bg-center w-full flex flex-col items-center justify-center text-center p-8">
             <div class="max-w-lg md:max-w-2xl mx-auto mb-10 md:mb-14 text-center flex flex-col justify-center items-center">
-                <h1 class="text-3xl md:text-4xl font-semibold mb-4 md:mb-6 lg:text-5xl flex flex-col md:flex-row text-white">
+                <h1 class="text-3xl md:text-4xl font-semibold mb-4 md:mb-6 lg:text-5xl flex flex-col md:flex-row text-gray-400 dark:text-white">
                     <span class="text-blue-400 dark:text-[#FFEA20] press-start-2p-regular">Flexible&#160;</span> <span className='press-start-2p-regular'>Plans</span>
                 </h1>
                 <p class="text-base md:text-xl text-gray-500 dark:text-gray-300 font-medium">

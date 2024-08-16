@@ -10,8 +10,14 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-	/* background-color: #151515; */
+	background-color: #F3F8FF;
 }
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: #151515;
+	}
+  }
 
 .HeroSection {
 	background-image: url(../public/bg4.jpg);
