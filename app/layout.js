@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         </head>
         <body className={`${inter.className}`}>
           <NavBar2 />
-          <Box>
+          <Box className="min-h-screen">
             {children}
           </Box>
           <Footer />
