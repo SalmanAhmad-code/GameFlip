@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React from 'react';
 import CheckoutPage from '../components/CheckoutPage';
 import convertToSubcurrency from '../lib/convertToSubcurrency';
 import { Elements } from "@stripe/react-stripe-js";
@@ -11,7 +11,7 @@ if (process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY === undefined) {
 }
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
 
-export default function page() {
+export default function Page() { // Updated function name to Page
     const searchParams = useSearchParams();
     const amount = searchParams.get('amount');
 
@@ -32,8 +32,7 @@ export default function page() {
                 >
                     <CheckoutPage amount={amount} />
                 </Elements>
-
             </div>
         </div>
-    )
+    );
 }
