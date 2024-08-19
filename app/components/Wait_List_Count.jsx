@@ -38,7 +38,7 @@ export default function WaitlistCount() {
     return (
         <div className='w-3/5 h-[20vh] bg-transparent absolute bottom-[-5rem]'>
             <div className='flex justify-center items-center h-full'>
-                <h1 className='text-xl md:text-3xl font-bold text-white bg-black opacity-50 p-4 border-4 border-white text-center'>Current Waitlist Count: <span className={`${styles.count} ${animationClass}`}>{count !== null ? count : '...'}</span></h1>
+                <h1 className='text-xl md:text-3xl font-bold text-white bg-black opacity-50 p-4 border-4 border-white text-center'>Current Waitlist Count: <span className={`${styles.count} ${animationClass}`}>{count !== null ? count : ''}</span></h1>
             </div>
         </div>
     );

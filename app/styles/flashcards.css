@@ -1,0 +1,36 @@
+/* From Uiverse.io by SteveBloX */
+.card {
+    box-sizing: border-box;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: rgb(63, 63, 63);
+    background-color: whitesmoke;
+    width: 320px;
+    height: 254px;
+    perspective: 1000px;
+    font-family: sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    .card {
+        background-color: grey;
+        color: white;
+    }
+}
+
+.card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+}
+
+.card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}

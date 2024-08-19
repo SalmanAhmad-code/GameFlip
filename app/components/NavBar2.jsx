@@ -1,9 +1,13 @@
 'use client'
 import Image from 'next/image'
 import React, { useState } from 'react'
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { useRouter } from 'next/navigation';
+
 
 export default function NavBar2() {
     const [isOpen, setIsOpen] = useState(false);
+    const router = useRouter();
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -42,7 +46,7 @@ export default function NavBar2() {
                     <div className="flex flex-col lg:flex-row lg:items-center p-3 md:p-0">
                         <a
                             className="mb-4 me-5 ms-2 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
-                            href="#">
+                            href="https://game-flip.vercel.app">
                             <Image
                                 src={'/logo.png'}
                                 height={40}
@@ -50,7 +54,7 @@ export default function NavBar2() {
                                 alt="TE Logo"
                                 loading="lazy" />
                         </a>
-                        <a href="/" style={{
+                        <a href="https://game-flip.vercel.app" style={{
                             transitionDuration: "500ms !important"
                         }} className="text-[#151515] dark:text-[#F3F8FF] font-semibold text-2xl hover:text-green-500 dark:hover:text-[#FFEA20]">GameFlip</a>
                         {/* Left navigation links */}
@@ -60,33 +64,54 @@ export default function NavBar2() {
                             <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
                                 <a
                                     className="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
-                                    href="#home"
+                                    href="/#home"
                                     data-twe-nav-link-ref
                                 >Home</a>
                             </li>
                             <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
                                 <a
                                     className="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
-                                    href="#features"
+                                    href="/#features"
                                     data-twe-nav-link-ref
                                 >Features</a>
                             </li>
                             <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
                                 <a
                                     className="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
-                                    href="#plans"
+                                    href="/#plans"
                                     data-twe-nav-link-ref
                                 >Plans</a>
+                            </li>
+                            <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                                <a
+                                    className="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                                    href="/#creators"
+                                    data-twe-nav-link-ref
+                                >Creators</a>
                             </li>
                         </ul>
                     </div>
                 </div>
 
                 {/* Right elements */}
-                <ul className="w-48 ml-10 flex flex-row justify-center items-center gap-2 mr-4">
-                    <li><button className="pixelBtn">Login</button></li>
-                    <li><button className="pixelBtn">Signup</button></li>
-                </ul>
+
+                <SignedOut>
+                    <ul className="w-48 ml-10 flex flex-row justify-center items-center gap-2 mr-4">
+                        <li><button onClick={() => router.push('/sign-in')} passHref className="pixelBtn">Login</button></li>
+                        <li><button onClick={() => router.push('/sign-up')} passHref className="pixelBtn">Signup</button></li>
+                    </ul>
+                </SignedOut>
+                <SignedIn>
+                    <ul className='flex gap-4 flex-row justify-between items-center'>
+                        <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                            <button onClick={() => router.push('/generate')} className='MineBtn'>Create Cards</button>
+                        </li>
+                        <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                            <button onClick={() => router.push('/flashcards')} className='MineBtn'>Dashboard</button>
+                        </li>
+                    </ul>
+                    <UserButton afterSignOutUrl="/" />
+                </SignedIn>
             </div>
         </nav>
     )

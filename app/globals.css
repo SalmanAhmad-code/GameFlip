@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Playwrite+AR:wght@100..400&family=Playwrite+HR+Lijeva:wght@100..400&family=Press+Start+2P&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+.oswald {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+	background-color: #acacac;
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+	background-color: #555;
+}
+
+.cl-avatarBox {
+	width: 2.75rem;
+	height: 2.75rem;
+}
 
 html {
 	cursor: url('https://i.ibb.co/DRPKLYj/cursor-default.png'), auto;
@@ -15,9 +45,9 @@ body {
 
 @media (prefers-color-scheme: dark) {
 	body {
-		background: #151515;
+		background: #242424;
 	}
-  }
+}
 
 .HeroSection {
 	background-image: url(../public/bg4.jpg);
@@ -98,14 +128,6 @@ body {
 /*
 -- Start BackGround Animation 
 */
-.area {
-	width: 99%;
-	height: 100%;
-	position: absolute;
-	z-index: -1;
-	bottom: 0;
-}
-
 .circles {
 	position: absolute;
 	top: 0;
@@ -130,7 +152,7 @@ body {
 	.circles li {
 		background: rgba(255, 255, 255, 0.2);
 	}
-  }
+}
 
 .circles li:nth-child(1) {
 	left: 25%;
@@ -337,3 +359,80 @@ body {
 /*
 -- End BackGround Animation 
 */
+
+/* Minecraft Btn Style */
+
+/* From Uiverse.io by adamgiebl */
+.MineBtn {
+	padding: 10px 40px;
+	font-size: 18px;
+	background-color: #c2c2c2;
+	color: #ffffff;
+	text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	border: 0;
+	z-index: 1;
+	user-select: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	white-space: unset;
+	padding: .8rem 1.5rem;
+	text-decoration: none;
+	font-weight: 900;
+	transition: all 0.7s cubic-bezier(0, .8, .26, .99);
+}
+
+.MineBtn:before {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	content: '';
+	transition: .7s cubic-bezier(0, .8, .26, .99);
+	z-index: -1;
+	background-color: #c3c3c3 !important;
+	box-shadow: 0 -4px rgba(113, 113, 113, 0.5) inset, 0 4px rgb(255 255 255 / 20%) inset, -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+}
+
+@media (prefers-color-scheme: dark){
+	.MineBtn::before {
+		background-color: #333 !important;
+		box-shadow: 0 -4px rgba(0, 0, 0, 0.5) inset, 0 4px rgb(255 255 255 / 20%) inset, -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+	}
+}
+
+.MineBtn:after {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	content: '';
+	box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+	transition: .7s cubic-bezier(0, .8, .26, .99);
+}
+
+.MineBtn:hover:before {
+	box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset, -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+}
+
+.MineBtn:hover:after {
+	box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+}
+
+.MineBtn:active {
+	transform: translateY(4px);
+}
+
+.MineBtn:active:after {
+	box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+}

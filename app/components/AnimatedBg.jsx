@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function AnimatedBg() {
     return (
-        <div class="area !z-0">
-            <ul class="circles">
+        <div className="area w-full h-full absolute bottom-0 -z-40">
+            <ul className="circles">
                 <li></li>
                 <li></li>
                 <li></li>
